@@ -1,0 +1,40 @@
+.battle-modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.battle-modal-grid {
+  margin-top: 20px;
+}
+
+.battle-modal-card {
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.battle-modal-image {
+  width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.battle-modal-button {
+  margin-top: 20px;
+}
+
+.battle-modal-button-close {
+  margin-top: 10px;
+}
+
+.battle-modal-result {
+  margin-top: 20px;
+}

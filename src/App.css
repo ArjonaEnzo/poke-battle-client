@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+.app-container {
+  margin-top: 20px;
+  max-width: 1200px; /* Ajusta el ancho máximo */
+}
+
+.grid-spacing {
+  margin-top: 20px;
+}
