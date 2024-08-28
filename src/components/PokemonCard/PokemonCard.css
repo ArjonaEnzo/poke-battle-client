@@ -6,6 +6,7 @@
 
 .pokemon-card-content {
   text-align: center;
+  background: #d2cf05;
 }
 
 .pokemon-card-image {
@@ -13,6 +14,7 @@
   max-height: 150px;
   object-fit: contain;
   margin-bottom: 10px;
+  background: #656363;
 }
 
 .pokemon-card-button {

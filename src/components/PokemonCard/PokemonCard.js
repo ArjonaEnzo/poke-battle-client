@@ -21,7 +21,7 @@ const PokemonCard = ({ pokemon, onSelectPokemon, showButton = true }) => {
         {showButton && onSelectPokemon && (
           <Button
             variant="contained"
-            color="primary"
+            color="inherit"
             onClick={() => onSelectPokemon(pokemon)}
             className="pokemon-card-button"
           >
