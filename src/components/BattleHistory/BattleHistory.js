@@ -18,16 +18,19 @@ const BattleHistory = ({ pokemonDictionary, refresh }) => {
         Battle History
       </Typography>
       <List>
-        {history.map((battle, index) => (
-          <ListItem key={index} className="battle-history-item">
-            <ListItemText
-              primary={`${pokemonDictionary[battle.pokemon1Id]} vs ${
-                pokemonDictionary[battle.pokemon2Id]
-              }`}
-              secondary={`Winner: ${pokemonDictionary[battle.winnerId]}`}
-            />
-          </ListItem>
-        ))}
+        {history
+          .slice()
+          .reverse()
+          .map((battle, index) => (
+            <ListItem key={index} className="battle-history-item">
+              <ListItemText
+                primary={`${pokemonDictionary[battle.pokemon1Id]} vs ${
+                  pokemonDictionary[battle.pokemon2Id]
+                }`}
+                secondary={`Winner: ${pokemonDictionary[battle.winnerId]}`}
+              />
+            </ListItem>
+          ))}
       </List>
     </Paper>
   );
