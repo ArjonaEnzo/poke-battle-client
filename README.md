@@ -1,70 +1,30 @@
-# Pokémon Battle App
+# Poke Battle Client
 
-Una aplicación web para batallas de Pokémon
+React front end for [poke-battle-api](https://github.com/ArjonaEnzo/poke-battle-api). Pick a Pokémon from the list, the app assigns a random opponent, and the battle runs on the API. You then see the winner and the battle history.
 
-## Instalación
+## Stack
 
-1. Clona este repositorio:
+React 18 (Create React App) · Material UI · NES.css for the retro look · Axios and fetch for the API calls.
 
-   ```bash
-   git clone https://github.com/tu-usuario/pokemon-battle-app.git
-   ```
+## Structure
 
-2. Navega a los directorios de backend y frontend para instalar las dependencias:
+- `components/PokemonList` and `PokemonCard`: the selectable roster.
+- `components/BattleModal`: confirms the matchup before the fight.
+- `components/BattleResultModal`: shows the winner.
+- `components/BattleHistory`: past battles, refreshed after each fight.
+- `utils/battleLogic.js`: opponent selection and the call to `POST /battle`.
 
-   - Para el backend:
+## Run it locally
 
-     ```bash
-     cd pokemon-battle-app/backend
-     pnpm install
-     ```
-
-   - Para el frontend:
-
-     ```bash
-     cd ../frontend
-     pnpm install
-     ```
-
-## Uso
-
-1. Configura tu entorno:
-
-   - Crea un archivo `.env` en el directorio del backend y configura tus variables de entorno según el archivo `.env.example`.
-
-2. Ejecuta el backend:
-
-   ```bash
-   cd backend
-   pnpm run start:dev
-   ```
-
-3. Ejecuta el frontend:
-
-   ```bash
-   cd ../frontend
-   pnpm start
-   ```
-
-4. Abre tu navegador y visita `http://localhost:3000` para ver la aplicación en funcionamiento.
-
-## Configuración del Entorno
-
-1. Copia el archivo `.env.example` y renómbralo a `.env`.
-2. Ajusta las variables en el archivo `.env` según sea necesario:
+Start the API first (it listens on `http://localhost:3000/api/v1`), then:
 
 ```bash
-cp .env.example .env
+git clone https://github.com/ArjonaEnzo/poke-battle-client.git
+cd poke-battle-client
+pnpm install
+PORT=3001 pnpm start
 ```
 
-## Características
+The API URL is hardcoded to `http://localhost:3000/api/v1` in `src/api.js` and `src/utils/battleLogic.js`.
 
-- Selección de Pokémon para batallas.
-- Resultados de batallas en tiempo real.
-- Historial de batallas almacenado y mostrado en la interfaz.
-
-## Tecnologías Utilizadas
-
-- **Frontend:** React, Material-UI
-- **Backend:** NestJS, TypeORM, SQLite
-- **Otros:** pnpm, Git
+Built in August 2024 together with the API.
